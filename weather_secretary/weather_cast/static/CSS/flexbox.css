@@ -1,0 +1,281 @@
+input:focus {outline:none;}
+a {text-decoration: none;}
+
+.main {
+    display: grid;
+    /* grid-gap: 10px; */
+    height: 100vh;
+    grid-template-areas: 'left center right'
+                         'footer footer footer';
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows : 1fr 100px ;  
+    background-color: rgb(235, 235, 235);
+}
+
+.side-left{
+    /* background-color: beige; */
+    grid-area : left;
+}
+.center {
+    /* background-color: beige; */
+    grid-area : center;
+
+    display: flex;
+    flex-flow : column ;
+    height: 100vh;
+    min-width: 750px;
+}
+.abstract-bar {
+    height : 150px ; 
+    background-color: gray;
+    display: flex;
+    flex-flow : row;
+    justify-content: space-around;
+    margin-top : 5px; margin-left: 5px; margin-right: 5px;
+    border : 1px solid lightgray;
+    border-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    align-items: center;
+}
+.date, .time{
+    font-family: 'Alata', sans-serif;
+    font-weight: normal;
+    font-size:7vh;
+}
+.time, .temp {
+    width : 270px;
+}
+.date{
+    width : 300px;
+}
+.location {
+    /* color : palegoldenrod; */
+    font-family: 'Alata', sans-serif;
+    /* font-weight: normal; */
+    font-size: 5vh;
+}
+.card-body {
+    margin-left : 5px; margin-right: 5px;
+    border-radius: 0px 0px 0px 0px;
+    border : 0px;
+    border-left : 1px solid lightgray;
+    border-right: 1px solid lightgray;
+
+}
+.text-box {
+    border-radius: 30px;
+    width: 350px;
+    border : 3px solid grey ;
+}
+.search-btn {
+    border-radius: 5px;
+    background-color: white;
+    border : 2px solid gray;
+}
+.search-btn:hover {
+    background-color: lightgray;
+}
+
+.trendline {
+    height : 450px ;
+    /* background-color: whitesmoke; */
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+}
+.trend-left {
+    width : 25vw; 
+    min-width: 230px;
+    background-color: white;
+    border-left: 1px solid lightgray;
+
+    display : grid;
+    grid-template-areas: 'grid1 grid2'
+                         'grid3 grid3';
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    margin-left: 5px ;
+    padding : 5px ;
+}
+
+.grid1 {
+    grid-area : grid1 ;
+    
+}
+.weather-thumbnail {
+    height: 85%;
+    align-self: center;
+}
+.grid2 {
+    grid-area : grid2 ;
+    font-size: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.temp-minmax {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.temp-min{
+    padding-right: 10px;
+    border-right: lightgray solid 1px;
+    font-size : 15px;
+    font-weight: bold;
+    color : rgb(36, 78, 214);
+}
+.temp-max{
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color : red;
+}
+.weather-summary { 
+    font-size : 17px ;
+    font-weight: bold;
+    text-align: center;
+}
+.grid3 {
+    grid-area : grid3 ;
+    display: grid;
+    grid-template-areas: 'pm pm-value' 
+                         'micropm micropm-value' 
+                         'uv uv-value' ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-top : lightgray solid 1px ; 
+}
+.pm, .micropm, .uv {
+    color : rgb(85, 85, 85);
+}
+.pm {
+    grid-area : pm;
+}
+.pm-value {
+    grid-area : pm-value;
+    color : rgb(0, 174, 255);
+}
+.micropm {
+    grid-area : micropm;
+}
+.micropm-value {
+    grid-area : micropm-value;
+    color : rgb(0, 174, 255);
+}
+.uv {
+    grid-area : uv;
+}
+.uv-value {
+    grid-area : uv-value;
+    color : rgb(255, 160, 72)
+}
+
+
+.trend-right {
+    width : 75vw;
+    margin-right: 5px;
+    border-right: solid 1px lightgray;
+}
+
+.hashtag {
+    text-align: center;
+    height : 100px ; 
+    background-color: honeydew;
+    display : flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    margin-top : 0px;
+    border-radius: 0px 0px 5px 5px;
+    border : 1px solid lightgray;
+    border-top: 0px;
+
+}
+.hashtag-child {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size : 1.9em;
+    margin-left : 15px;
+    margin-right :15px;
+}
+.down {
+    height : 100vh;
+    /* background-color: khaki; */
+    display: flex;
+    flex-flow: column;
+}
+.blank {
+    height : calc(100% - 280px) ;
+    /* border: black 1px solid; */
+    align-self: flex-start;
+    display: table;
+}
+.dayofweek {
+    height : 30px;
+    border : 1px solid lightgray;
+    border-radius: 10px 10px 0 0;
+    background-color: lightyellow;
+    display : flex ;
+    flex-flow: row; 
+}
+.dayofweek-child {
+    width : 14vw;
+    font-weight: 550;
+}
+
+.calender {
+    height: 230px;
+    border-bottom: lightgray 1px solid;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-radius: 0px 0px 10px 10px;
+    display: grid;   
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+}
+
+.calender-day, .calender-dayN{
+    display: grid;
+    grid-template-areas: 'date img'
+                         'date temp';
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows : 2fr 1fr;   
+}
+.calender-dayN {
+    background-color: lightgray;
+}
+.calender-day:hover { 
+    background-color: lightgoldenrodyellow;
+    
+}
+.calender-date{
+    grid-area: date;
+    font-weight: bold;
+}
+.prev-weather {
+    color :navy;
+}
+.prev-weather:hover{
+    text-decoration: underline;
+}
+.calender-img{
+    grid-area: img;
+}
+.calender-weather {
+    width : 70px ; 
+}
+.calender-temp{
+    grid-area: temp;
+}
+.side-right {
+    /* background-color: beige; */
+    grid-area : right;
+}
+
+.footer {
+    background-color: rgb(250, 250, 250);
+    grid-area : footer;
+    vertical-align: middle;
+}
