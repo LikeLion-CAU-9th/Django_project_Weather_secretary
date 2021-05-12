@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'outfit',
     'weather_cast.apps.WeatherCastConfig',
+    'place',
 ]
 
 MIDDLEWARE = [
