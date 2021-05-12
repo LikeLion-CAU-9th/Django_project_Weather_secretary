@@ -1,0 +1,292 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+
+    <style>
+        .divider {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom fixed-top" style="background-color:#e3f2fd;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'image/navbar_favicon.png' %}" style="width:50px; height:50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 90px;">
+        <div class="container" style="text-align: left;">
+            <h3 class="fw-bold">오늘의 추천 코디</h3>
+            <h5>날씨에 따라 코디를 추천해줘요!</h5>
+            <img src="{% static 'image/오늘의 날씨.png' %}">
+            <br>
+            <button type="button" class="btn btn-primary mt-3">자세한 날씨</button>
+
+        </div>
+
+        <hr class="divider">
+
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#약간추움" class="nav-link active" role="tab" data-toggle="tab">10~15℃</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#시원함" class="nav-link" role="tab" data-toggle="tab">15~20℃</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#따뜻함" class="nav-link" role="tab" data-toggle="tab">20~25℃</a>
+                </li>
+
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="약간추움">
+                    <div class="row mt-4">
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩가을1.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#싱글라이더</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#가죽자켓</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩가을4.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#항공점퍼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩가을2.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#블루종</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩가을5.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#트렌치코트</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#후드티</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#청바지</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩가을3.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#트렌치코트</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#니트</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="시원함">
+                    <div class="row mt-4">
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩봄1.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#체크블레이저</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#청바지</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩봄4.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#아가일니트</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#청바지</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩봄2.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#아가일가디건</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩봄5.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#블레이저</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#크림진</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩봄3.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div>
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#가디건</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#청바지</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="따뜻함">
+                    <div class="row mt-4">
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩여름1.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#니트베스트</button>  
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#크림진</button> 
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩여름4.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#시크룩</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#올블랙</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#청바지</button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩여름2.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#카라티</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드슬랙스</button> 
+                                </div>
+                            </div>
+                            <div class="card mt-4" style="width: auto;">
+                                <img src="{% static 'image/데일리룩여름5.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#니트베스트</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#와이드청바지</button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                            <div class="card" style="width: auto;">
+                                <img src="{% static 'image/데일리룩여름3.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#미니멀</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#캐주얼</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#후드</button> 
+                                        <button type="button" class="btn mt-2" style="background-color:#c9e5f8">#반바지</button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
