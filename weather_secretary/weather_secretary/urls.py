@@ -19,5 +19,5 @@ import outfit.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('outfit.urls')),
+    path('outfit/', include('outfit.urls')),
 ]
