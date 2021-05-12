@@ -19,5 +19,5 @@ from weather_cast import views as cast
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', cast.weather_page, name = "weatherpage")
+    path('weather/', cast.weather_page, name = "weatherpage")
 ]
