@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from weather_cast import views as cast
 import outfit.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('outfit/', include('outfit.urls')),
+    path('weather/', cast.weather_page, name = "weatherpage"),
 ]

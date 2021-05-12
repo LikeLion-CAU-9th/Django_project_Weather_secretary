@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+
+  <!--favicon-->
+  <link rel="shortcut icon" href="../static/image/favicon.png">
+  <link rel="icon" href="../static/image/favicon.png">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+  <link rel="stylesheet" href="{% static 'css/flexbox.css'%}">
+
+  <!--font-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alata&family=Black+Han+Sans&display=swap');
+  </style>
+
+
+  <title>Weather Secretary </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="../static/image/favicon.png" href="#">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">날씨</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">날씨별 옷차림</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">날씨별 여행지</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="main" style="text-align: center;">
+    <div class="side-left">
+    </div>
+    <div class="center">
+      <div class = "abstract-bar">
+          <div class = "time">
+            PM 02:34
+          </div>
+          <div class = "location">
+            Seoul, Dongjak-gu
+            <a class="btn btn-outline-dark search-collapse" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              ▼
+            </a>
+          </div>
+          <div class = "date">
+            2021.05.11
+          </div>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <div form = "search-box">
+            <input class = "text-box" type = "search" placeholder="  위치를 입력하세요.">
+            <button class= "search-btn" type = "submit" href="#">검색</a>
+          </div>
+          </div>
+      </div>
+      <div class = "trendline">
+        <div class = "trend-left">
+          <div class = "grid1">
+            <img class = "weather-thumbnail" src = "../static/image/sunny.gif">
+          </div>
+          <div class = "grid2">24°C
+            <div class = "temp-minmax">
+              <div class = "temp-min">9°</div>
+              <div class = "temp-max">27°</div>
+            </div>
+            <div class = "weather-summary">
+              맑음
+            </div>
+          </div>
+          <div class = "grid3">
+            <div class = "pm">미세먼지</div>
+            <div class = "pm-value">22㎍/㎥ 좋음</div>
+            <div class = "micropm">초미세먼지</div>
+            <div class = "micropm-value">3㎍/㎥ 좋음</div>
+            <div class = "uv">자외선</div>
+            <div class = "uv-value">6 높음</div>
+          </div>
+
+        </div>
+        <div class = "trend-right">
+          <img src = "../static/image/weather-timeline.png" width = 100% height="100%"> 
+        </div>
+      </div>
+      <div class = "hashtag">
+        <div class = "hashtag-child">  
+          # 일교차 심함
+        </div>
+        <div class = "hashtag-child">  
+          # 오후 09 - 11시 소나기 
+        </div>
+        <div class = "hashtag-child">  
+          # 미세먼지 좋음
+        </div>
+        <div class = "hashtag-child">  
+          # 자외선 높음
+        </div>
+      </div>
+      <div class = "down">
+        <div class = "blank">
+
+        </div>
+        <div class = "dayofweek">
+          <div class = "dayofweek-child">Sun</div>
+          <div class = "dayofweek-child">Mon</div>
+          <div class = "dayofweek-child">Tue</div>
+          <div class = "dayofweek-child">Wed</div>
+          <div class = "dayofweek-child">Thu</div>
+          <div class = "dayofweek-child">Fri</div>
+          <div class = "dayofweek-child">Sat</div>
+        </div>
+        <div class = "calender">
+          <div class = "calender-dayN">
+            <div class = "calender-date">9</div>
+            <div class = "calender-img"></div>
+            <div class = "calender-temp"></div>
+
+          </div>
+          <div class = "calender-dayN">
+            <div class = "calender-date">10</div>
+            <a class = "prev-weather" href = "#">
+              지난 날씨  <br>확인 하기 >
+            </a>
+            <div class = "calender-temp"></div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">11</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">18 / 9 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">12</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">19 / 8 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">13</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">21 / 10 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">14</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">22 / 11 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">15</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">22 / 12 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">16</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">22 / 12 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">17</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">21 / 15 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">18</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">22 / 16 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">19</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">
+              20 / 13 °C</div>
+          </div>
+          <div class = "calender-day">
+            <div class = "calender-date">20</div>
+            <div class = "calender-img">
+              <img class = "calender-weather" src = "../static/image/sunny.gif">
+            </div>
+            <div class = "calender-temp">17 / 10 °C</div>
+          </div>
+          <div class = "calender-dayN">
+            <div class = "calender-date">21</div>
+            <div class = "calender-img"></div>
+            <div class = "calender-temp"></div>
+          </div>
+          <div class = "calender-dayN">
+            <div class = "calender-date">22</div>
+            <div class = "calender-img"></div>
+            <div class = "calender-temp"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side-right">
+    </div>
+    <div class="footer">
+      멋쟁이 사자처럼 9기 중앙대학교
+      <br>
+      Like Lion 9th CAU
+    </div>
+  
+  </div>
+  
+</body>
+
+</html>

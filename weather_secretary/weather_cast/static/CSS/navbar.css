@@ -1,0 +1,8 @@
+nav { 
+    position : sticky;
+}
+
+.navbar-brand {
+    width: 5%;
+    height: auto;
+}
